@@ -1,6 +1,6 @@
 # Localization lab
 
-This is a project used to test various aspects of iOS localization.
+This is a project that can be used to learn about/play with/test various aspects of iOS internationalization / localization.
 
 ## Create a new localized strings file
 - Go to Xcode -> New -> File -> Strings File and name the file Localizable.strings
@@ -14,5 +14,7 @@ Instead of having to change region in the Simulator -> System Settings -> Genera
 
 
 ## Resources:
+
 https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPInternational/TestingYourInternationalApp/TestingYourInternationalApp.html
+
 https://stackoverflow.com/questions/35463150/scheme-language-setting-ignored-in-ios-unit-and-ui-tests
