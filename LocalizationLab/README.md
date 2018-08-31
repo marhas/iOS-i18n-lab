@@ -13,3 +13,6 @@ Setting Application Language in the "Run" settings of the scheme is convenient t
 Instead of having to change region in the Simulator -> System Settings -> General -> Region, we can use launch arguments (see scheme settings in this project)
 
 
+## Resources:
+https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPInternational/TestingYourInternationalApp/TestingYourInternationalApp.html
+https://stackoverflow.com/questions/35463150/scheme-language-setting-ignored-in-ios-unit-and-ui-tests
