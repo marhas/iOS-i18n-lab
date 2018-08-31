@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,76 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocalizationLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i18n lab" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qPp-I5-mlb">
+                                <rect key="frame" x="20" y="40" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The app is using language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hDR-Ty-bWP">
+                                <rect key="frame" x="20" y="114" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RnD-Qz-5LZ" userLabel="localizationLabel">
+                                <rect key="frame" x="20" y="168" width="335" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Storyboard translation:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6eF-f3-rIt" userLabel="Storyboard translation title">
+                                <rect key="frame" x="20" y="248" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UJr-Nz-VZf" userLabel="Storyboard translated text">
+                                <rect key="frame" x="20" y="302" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lya-IT-AMC">
+                                <rect key="frame" x="20" y="356" width="335" height="291"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lya-IT-AMC" secondAttribute="bottom" constant="20" id="0re-bV-akQ"/>
+                            <constraint firstItem="RnD-Qz-5LZ" firstAttribute="top" secondItem="hDR-Ty-bWP" secondAttribute="bottom" constant="20" id="4Ug-56-seB"/>
+                            <constraint firstItem="UJr-Nz-VZf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="5Ru-4J-uid"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6eF-f3-rIt" secondAttribute="trailing" constant="20" id="5Zf-5r-5BJ"/>
+                            <constraint firstItem="Lya-IT-AMC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6hr-Mo-fim"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qPp-I5-mlb" secondAttribute="trailing" constant="20" id="7Nj-vV-qEq"/>
+                            <constraint firstItem="6eF-f3-rIt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AYT-C8-kXx"/>
+                            <constraint firstAttribute="trailing" secondItem="RnD-Qz-5LZ" secondAttribute="trailing" constant="20" id="L2G-6D-FRU"/>
+                            <constraint firstItem="hDR-Ty-bWP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Nfl-5c-cmX"/>
+                            <constraint firstItem="6eF-f3-rIt" firstAttribute="top" secondItem="RnD-Qz-5LZ" secondAttribute="bottom" constant="80" id="UDl-Dw-hj9"/>
+                            <constraint firstItem="UJr-Nz-VZf" firstAttribute="top" secondItem="6eF-f3-rIt" secondAttribute="bottom" constant="20" id="Wvy-uS-f5J"/>
+                            <constraint firstItem="RnD-Qz-5LZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ZfB-h2-Hpf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lya-IT-AMC" secondAttribute="trailing" constant="20" id="bnW-wT-gSW"/>
+                            <constraint firstItem="qPp-I5-mlb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kKl-6Q-MPa"/>
+                            <constraint firstItem="qPp-I5-mlb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nhd-zA-Vsm"/>
+                            <constraint firstItem="Lya-IT-AMC" firstAttribute="top" secondItem="UJr-Nz-VZf" secondAttribute="bottom" constant="20" id="ruv-ey-ayc"/>
+                            <constraint firstItem="hDR-Ty-bWP" firstAttribute="top" secondItem="qPp-I5-mlb" secondAttribute="bottom" constant="40" id="s1M-Go-jSk"/>
+                            <constraint firstAttribute="trailing" secondItem="UJr-Nz-VZf" secondAttribute="trailing" constant="20" id="vNb-EK-6wQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hDR-Ty-bWP" secondAttribute="trailing" constant="20" id="vlD-8i-lOb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="detailsTextView" destination="Lya-IT-AMC" id="QGt-4V-AE2"/>
+                        <outlet property="languageLabel" destination="RnD-Qz-5LZ" id="wM5-EK-n8H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

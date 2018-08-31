@@ -10,16 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var languageLabel: UILabel!
+    @IBOutlet var detailsTextView: UITextView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let languageAndRegion = NSLocalizedString("languageAndRegion", comment: "")
+        languageLabel.text = languageAndRegion
+
+        let currentLocale = NSLocale.current.identifier
+        let preferredLanguages = NSLocale.preferredLanguages
+        let availableLocales = NSLocale.availableLocaleIdentifiers
+
+        let localeDescriptionString = "Current locale: \(currentLocale)\nPreferred languages:\(preferredLanguages)\nAvailable locales: \(availableLocales)"
+        detailsTextView.text = localeDescriptionString
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
